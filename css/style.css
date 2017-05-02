@@ -4,6 +4,26 @@
   margin: 0 auto;
 }
 
+.main_bg {
+  background: url('/images/bg.jpg') !important;
+  background-size: cover;
+}
+
+.main_menu {
+  border-color: transparent !important;
+}
+
 .main_search_bar{
   width: 100%;
+}
+
+.univ .image {
+  height: 200px;
+}
+
+.image > img {
+  overflow: hidden;
+  width: auto;
+  height: 100% !important;
+  max-height: 100%;
 }
