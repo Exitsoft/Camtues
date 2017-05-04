@@ -1,7 +1,5 @@
 /* Exitsoft */
 
-/* Main CSS */
-
 * {
   margin: 0 auto;
 }
@@ -28,21 +26,4 @@
   width: auto;
   height: 100% !important;
   max-height: 100%;
-}
-
-.modal .header {
-  color: white !important;
-}
-
-.modal .sub.header {
-  color: white !important;
-}
-
-
-/* Login CSS*/
-.login input {
-  margin-bottom: 5px !important;
-}
-.login .button {
-  margin-bottom: 5px !important;
 }
