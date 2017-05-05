@@ -23,8 +23,20 @@
         </div>
       </div>
     </div>
+    <!-- Sidebar Menu -->
+    <div class="ui vertical inverted sidebar menu">
+      <a class="active item">Home</a>
+      <a class="item">Work</a>
+      <a class="item">Company</a>
+      <a class="item">Careers</a>
+      <a class="item">Login</a>
+      <a class="item">Signup</a>
+    </div>
 
     <div class="ui inverted vertical sub masthead center aligned segment">
+      <a class="toc item">
+        <i class="sidebar icon"></i>
+      </a>
       <div class="animated fadeInUp ui text container">
         <h1 class="ui inverted header">TUTOR</h1>
         <h2>당신이 가진 재능을 마음껏 뽐내보세요</h2>
@@ -35,7 +47,7 @@
     <div class="ui vertical stripe segment">
       <div class="ui middle aligned stackable grid container">
         <!-- Steps Row -->
-        <div class="row">
+        <div class="tutor row">
           <div class="ui fluid ordered steps">
             <div class="completed step">
               <div class="content">
@@ -63,7 +75,7 @@
         <div class="row"></div>
         <!-- Form Row -->
         <div class="row">
-          <form class="ui form">
+          <form class="ui tutor form">
             <h4 class="ui dividing header">튜터 정보</h4>
             <div class="field">
               <label>이름</label>
@@ -74,26 +86,34 @@
             <div class="field">
               <label>이메일 주소</label>
               <div class="field">
-                <input type="email" name="shipping[first-name]" placeholder="Email Address">
+                <input type="email" name="shipping[first-name]" placeholder="camtues@example.com">
               </div>
             </div>
-            <div class="two fields">
-              <div class="nine wide field">
+            <div class="fields">
+              <div class="ten wide field">
                 <label>핸드폰 번호</label>
                 <div class="field">
-                  <input type="number" name="shipping[first-name]" placeholder="Phone Number">
+                  <input type="number" name="shipping[first-name]" placeholder="010-0000-0000">
                 </div>
               </div>
-              <div class="four wide field">
+              <div class="six wide field">
                 <label>&nbsp;</label>
                 <div class="field">
                   <div class="ui fluid button" tabindex="0">인증번호 요청</div>
                 </div>
               </div>
-              <div class="three wide field">
-                <label>인증번호</label>
+            </div>
+            <div class="fields">
+              <div class="ten wide field">
+                <label>인증 번호</label>
                 <div class="field">
-                  <input type="number" name="shipping[first-name]" placeholder="Verify">
+                  <input type="number" name="shipping[first-name]" placeholder="000000">
+                </div>
+              </div>
+              <div class="six wide field">
+                <label>&nbsp;</label>
+                <div class="field">
+                  <div class="ui fluid button" tabindex="0">인증번호 확인</div>
                 </div>
               </div>
             </div>
@@ -124,7 +144,7 @@
              </div>
             </div>
 
-            <div class="fields">
+            <!-- <div class="fields">
               <div class="seven wide field">
                 <label>Card Number</label>
                 <input type="text" name="card[number]" maxlength="16" placeholder="Card #">
@@ -158,10 +178,13 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
             <h4 class="ui dividing header">경력 정보</h4>
+            <div class="ui fluid basic button" tabindex="0"><i class="plus icon"></i>추가</div>
             <h4 class="ui dividing header">자격증 정보</h4>
-            <div class="ui fluid button" tabindex="0">튜터 인증 요청</div>
+            <div class="ui fluid basic button" tabindex="0"><i class="plus icon"></i>추가</div>
+            <br />
+            <div class="ui fluid primary button" tabindex="0">튜터 인증 요청</div>
           </form>
         </div>
       </div>

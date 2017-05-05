@@ -42,9 +42,7 @@
   min-height: 250px !important;
 }
 
-@media (max-width:480px) {
 
-}
 
 
 /* Login CSS*/
@@ -53,4 +51,20 @@
 }
 .login .button {
   margin-bottom: 5px !important;
+}
+
+
+/* Tutor Register Page */
+.tutor.form {
+  min-width: 60%;
+}
+
+@media (max-width: 767px) {
+  .tutor.form {
+    width: 100%;
+    margin-top: 5em;
+  }
+  .tutor.form .fields {
+    margin-bottom: 1em !important;
+  }
 }
