@@ -38,6 +38,14 @@
   color: white !important;
 }
 
+.sub.masthead {
+  min-height: 250px !important;
+}
+
+@media (max-width:480px) {
+
+}
+
 
 /* Login CSS*/
 .login input {

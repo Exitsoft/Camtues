@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ./header.ejs %>
+    <title>튜터 등록</title>
+  </head>
+  <body>
+    <% include ./login/login_modal.ejs %>
+    <!-- Following Menu -->
+    <div class="ui large top fixed menu">
+      <div class="ui container">
+        <a class="item" href="/"><i class="home icon"></i></a>
+        <a class="item"><i class="add user icon"></i>소개</a>
+        <a class="active item" href="/tutor_register"><i class="add user icon"></i>튜터등록</a>
+        <a class="item"><i class="search icon"></i>강의검색</a>
+        <div class="right menu">
+          <div class="item">
+            <a class="ui button login_btn">로그인</a>
+          </div>
+          <div class="item">
+            <a class="ui primary button">회원가입</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui inverted vertical sub masthead center aligned segment">
+      <div class="animated fadeInUp ui text container">
+        <h1 class="ui inverted header">TUTOR</h1>
+        <h2>당신이 가진 재능을 마음껏 뽐내보세요</h2>
+        <br />
+      </div>
+    </div>
+
+    <div class="ui vertical stripe segment">
+      <div class="ui middle aligned stackable grid container">
+        <!-- Steps Row -->
+        <div class="row">
+          <div class="ui fluid ordered steps">
+            <div class="completed step">
+              <div class="content">
+                <div class="title">회원가입</div>
+                <div class="description">Camtues에 회원가입을 해주세요</div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="content">
+                <div class="title">학교인증</div>
+                <div class="description">본인 및 신뢰 정보 확인</div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="content">
+                <div class="title">수업 등록</div>
+                <div class="description">자신이 가지고 있는 재능 뽐내기</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Blank Row -->
+        <div class="row"></div>
+        <!-- Blank Row -->
+        <div class="row"></div>
+        <!-- Form Row -->
+        <div class="row">
+          <form class="ui form">
+            <h4 class="ui dividing header">튜터 정보</h4>
+            <div class="field">
+              <label>이름</label>
+              <div class="field">
+                <input type="text" name="shipping[first-name]" placeholder="Name">
+              </div>
+            </div>
+            <div class="field">
+              <label>이메일 주소</label>
+              <div class="field">
+                <input type="email" name="shipping[first-name]" placeholder="Email Address">
+              </div>
+            </div>
+            <div class="two fields">
+              <div class="nine wide field">
+                <label>핸드폰 번호</label>
+                <div class="field">
+                  <input type="number" name="shipping[first-name]" placeholder="Phone Number">
+                </div>
+              </div>
+              <div class="four wide field">
+                <label>&nbsp;</label>
+                <div class="field">
+                  <div class="ui fluid button" tabindex="0">인증번호 요청</div>
+                </div>
+              </div>
+              <div class="three wide field">
+                <label>인증번호</label>
+                <div class="field">
+                  <input type="number" name="shipping[first-name]" placeholder="Verify">
+                </div>
+              </div>
+            </div>
+            <h4 class="ui dividing header">대학교 정보</h4>
+            <div class="two fields">
+              <div class="field">
+                <label>대학교</label>
+                <select class="ui fluid dropdown">
+                  <option value="">대학교</option>
+                  <option value="KOU">고려대학교(서울)</option>
+                  <option value="KOUS">고려대학교(세종)</option>
+                  <option value="KHU">경희대학교(서울)</option>
+                  <option value="KHUK">경희대학교(국제)</option>
+                  <option value="SNU">서울대학교</option>
+                  <option value="SNU">연세대학교(서울)</option>
+                  <option value="SNU">연세대학교(원주)</option>
+                  <option value="SKKU">성균관대학교(인문)</option>
+                  <option value="SKKU">성균관대학교(자연)</option>
+                  <option value="HYU">한양대학교(서울)</option>
+                  <option value="HYUE">한양대학교(ERICA)</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>학과</label>
+                <div class="field">
+                  <input type="text" name="shipping[first-name]" placeholder="학과">
+                </div>
+             </div>
+            </div>
+
+            <div class="fields">
+              <div class="seven wide field">
+                <label>Card Number</label>
+                <input type="text" name="card[number]" maxlength="16" placeholder="Card #">
+              </div>
+              <div class="three wide field">
+                <label>CVC</label>
+                <input type="text" name="card[cvc]" maxlength="3" placeholder="CVC">
+              </div>
+              <div class="six wide field">
+                <label>Expiration</label>
+                <div class="two fields">
+                  <div class="field">
+                    <select class="ui fluid search dropdown" name="card[expire-month]">
+                      <option value="">Month</option>
+                      <option value="1">January</option>
+                      <option value="2">February</option>
+                      <option value="3">March</option>
+                      <option value="4">April</option>
+                      <option value="5">May</option>
+                      <option value="6">June</option>
+                      <option value="7">July</option>
+                      <option value="8">August</option>
+                      <option value="9">September</option>
+                      <option value="10">October</option>
+                      <option value="11">November</option>
+                      <option value="12">December</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <input type="text" name="card[expire-year]" maxlength="4" placeholder="Year">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h4 class="ui dividing header">경력 정보</h4>
+            <h4 class="ui dividing header">자격증 정보</h4>
+            <div class="ui fluid button" tabindex="0">튜터 인증 요청</div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <% include ./Footer.ejs %>
+  </body>
+</html>
