@@ -46,6 +46,9 @@
 
 
 /* Login CSS*/
+.modal .login {
+  width: 60%;
+}
 .login input {
   margin-bottom: 5px !important;
 }
@@ -66,5 +69,11 @@
   }
   .tutor.form .fields {
     margin-bottom: 1em !important;
+  }
+  .modal .login {
+    width: 95%;
+  }
+  .container {
+    margin-bottom: 1.5em;
   }
 }
