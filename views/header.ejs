@@ -35,7 +35,7 @@
     margin-top: 3em;
     margin-bottom: 0em;
     font-size: 4em;
-    font-weight: normal;
+    font-weight: bold;
   }
 
   .main.masthead h2 {
@@ -47,7 +47,7 @@
     margin-top: 1em;
     margin-bottom: 0em;
     font-size: 3em;
-    font-weight: normal;
+    font-weight: bold;
   }
 
   .sub.masthead h2 {
@@ -96,6 +96,14 @@
   .secondary.pointing.menu .toc.item {
     display: none;
   }
+  .ui.steps .step.completed > .icon:before, .ui.ordered.steps .step.completed:before {
+    color: #388363;
+  }
+
+  .button.primary {
+    background: #388363 !important;
+  }
+
 
   @media only screen and (max-width: 700px) {
     .ui.fixed.menu {
@@ -112,8 +120,12 @@
       min-height: 350px;
     }
     .main.masthead h1.ui.header {
-      font-size: 2em;
+      font-size: 2.8em;
       margin-top: 1.5em;
+    }
+    .main.masthead h2 {
+      margin-top: 0.5em;
+      font-size: 1em;
     }
     .sub.masthead h1.ui.header{
       margin-top: 1.3em;
