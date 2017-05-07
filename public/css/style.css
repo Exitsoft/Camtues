@@ -48,6 +48,9 @@
   min-height: 250px !important;
 }
 
+i.primary {
+  color: #388363;
+}
 /* Login CSS*/
 .modal .login {
   width: 60%;
