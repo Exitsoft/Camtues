@@ -7,6 +7,11 @@
   margin: 0 auto;
 }
 
+.ui.secondary.pointing.menu .active.item {
+  border-color: #388363 !important;
+  color: #388363 !important;
+}
+
 .main_bg {
   background: url('/images/bg.jpg') !important;
   background-size: cover;
@@ -46,6 +51,10 @@
 
 .sub.masthead {
   min-height: 250px !important;
+}
+
+.header.primary {
+  color: #388363 !important;
 }
 
 i.primary {

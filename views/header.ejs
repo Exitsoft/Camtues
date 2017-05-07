@@ -136,20 +136,17 @@
     }
 
     .sub.masthead h1.ui.header {
+      font-size: 2.5em;
       margin-top: 1.3em;
     }
 
-    .masthead h2 {
+    .sub.masthead h2 {
       margin-top: 0.5em;
-      font-size: 1.5em;
     }
   }
 </style>
 <script>
   $(document).ready(function() {
-    setInterval(function() {
-      $('.shape').shape('flip up');
-    }, 5000);
     // fix menu when passed
     $('.masthead')
       .visibility({
@@ -161,7 +158,6 @@
           $('.fixed.menu').transition('fade out');
         }
       });
-
 
     $('.login_btn').click(function() {
       $('.login_modal').modal('show');
