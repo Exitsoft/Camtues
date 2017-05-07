@@ -6,285 +6,313 @@
     <title>Camutues</title>
 </head>
 <script>
-$(document).ready(function(){
-  $('.login_btn').click(function(){
-    $('.login_modal').modal('show');
+  $(document).ready(function() {
+    $('.login_btn').click(function() {
+      $('.login_modal').modal('show');
+    });
+
+    $('.arrow.down.icon').click(function() {
+      $("html, body").animate({
+        scrollTop: $('.masthead').height() + 50
+      }, 1000);
+    })
+
+    $('.main.masthead').height(screen.height);
+    $('.main.masthead').css({
+      'max-height': screen.height
+    });
+
+    $('.main.masthead h1.ui.header').css({
+      'margin-top': screen.height / 4 - $('.main.masthead .container').height()
+    })
+    $('.arrow').css({
+      'margin-top': '5em'
+    });
+    $('.ui.rating').rating();
+
   });
-  $('.ui.rating').rating();
-});
 </script>
+
 <body>
   <!-- Modal -->
   <% include ./login/login_modal.ejs %>
 
-  <!-- Following Menu -->
-  <div class="ui large top fixed hidden menu">
-    <div class="ui container">
-      <a class="active item" href="/"><i class="home icon"></i></a>
-      <a class="item"><i class="add user icon"></i>소개</a>
-      <a class="item" href="/tutor_register"><i class="add user icon"></i>튜터등록</a>
-      <a class="item"><i class="search icon"></i>강의검색</a>
-      <div class="right menu">
-        <div class="item">
-          <a class="ui button login_btn">로그인</a>
-        </div>
-        <div class="item">
-          <a class="ui primary button">회원가입</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Sidebar Menu -->
-  <div class="ui vertical inverted sidebar menu">
-    <a class="active item" href="/">홈</a>
-    <a class="item">소개</a>
-    <a class="item" href="/tutor_register">튜터등록</a>
-    <a class="item" href="/login">로그인</a>
-    <a class="item">회원가입</a>
-  </div>
-
-
-  <!-- Page Contents -->
-  <div class="pusher">
-    <div class="ui vertical main masthead center aligned segment">
-
+    <!-- Following Menu -->
+    <div class="ui large top fixed hidden menu">
       <div class="ui container">
-        <div class="ui large secondary pointing menu main_menu">
-          <a class="toc item">
-            <i class="sidebar icon"></i>
-          </a>
-          <a class="active item" href="#"><i class="home icon"></i></a>
-          <a class="item">소개</a>
-          <a class="item" href="/tutor_register">튜터등록</a>
-          <a class="item">인기강좌</a>
-          <div class="right item">
-            <a class="ui basic button login_btn">로그인</a>
-            <a class="ui basic button">회원가입</a>
+        <a class="active item" href="/"><i class="home icon"></i></a>
+        <a class="item"><i class="add user icon"></i>소개</a>
+        <a class="item" href="/tutor_register"><i class="add user icon"></i>튜터등록</a>
+        <a class="item"><i class="search icon"></i>강의검색</a>
+        <div class="right menu">
+          <div class="item">
+            <a class="ui button login_btn">로그인</a>
           </div>
-        </div>
-      </div>
-
-      <div class="ui text container animated fadeInUp">
-        <h1 class="ui inverted header" style="color: #388363">Camtues</h1>
-        <h2>당신이 배우고 싶은 모든 것, 학교에서 배우세요</h2>
-        <br />
-        <div class="row">
-          <div class="ui stackable grid">
-            <div class="six wide column">
-              <div class="field">
-                <select class="ui fluid dropdown">
-                  <option value="">대학교</option>
-                  <option value="KOU">고려대학교(서울)</option>
-                  <option value="KOUS">고려대학교(세종)</option>
-                  <option value="KHU">경희대학교(서울)</option>
-                  <option value="KHUK">경희대학교(국제)</option>
-                  <option value="SNU">서울대학교</option>
-                  <option value="SNU">연세대학교(서울)</option>
-                  <option value="SNU">연세대학교(원주)</option>
-                  <option value="SKKU">성균관대학교(인문)</option>
-                  <option value="SKKU">성균관대학교(자연)</option>
-                  <option value="HYU">한양대학교(서울)</option>
-                  <option value="HYUE">한양대학교(ERICA)</option>
-                </select>
-              </div>
-            </div>
-            <div class="ten wide column">
-              <div class="field">
-                <div class="ui icon input main_search_bar">
-                  <input type="text" placeholder="배우고 싶은 것을 검색하세요"><i class="search icon"></i>
-                </div>
-              </div>
-            </div>
+          <div class="item">
+            <a class="ui primary button">회원가입</a>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="ui vertical stripe segment">
-      <h2 class="ui center aligned icon header">
-        <i class="university icon"></i>
-        <br />
-        <div class="content">
-          대학교 캠퍼스
-          <div class="sub header">튜터링을 받을 대학교를 선택해주세요.</div>
-        </div>
-      </h2>
-      <br />
-      <br />
-      <br />
-      <div class="ui middle aligned stackable grid container">
-        <div class="row">
-          <div class="ui three stackable link cards">
-            <div class="univ card">
-              <div class="image">
-                <img src="/images/univ/hanyang-erica.jpg">
-              </div>
-              <div class="content">
-                <div class="header">한양대학교 ERICA</div>
-                <div class="meta">
-                  <a>경기도 안산시 상록구</a>
-                </div>
+    <!-- Sidebar Menu -->
+    <div class="ui vertical inverted sidebar menu">
+      <a class="active item" href="/">홈</a>
+      <a class="item">소개</a>
+      <a class="item" href="/tutor_register">튜터등록</a>
+      <a class="item" href="/login">로그인</a>
+      <a class="item">회원가입</a>
+    </div>
 
-              </div>
-              <div class="extra content">
-                <span class="right floated"><i class="book icon"></i>348개 강의</span>
-                <span> <i class="user icon"></i>9,175명</span>
-              </div>
-            </div>
-            <div class="univ card">
-              <div class="image">
-                <img src="/images/univ/hanyang-seoul.jpg">
-              </div>
-              <div class="content">
-                <div class="header">한양대학교</div>
-                <div class="meta">
-                  <a>서울특별시 왕십리</a>
-                </div>
-              </div>
-              <div class="extra content">
-                <span class="right floated"><i class="book icon"></i>348개 강의</span>
-                <span> <i class="user icon"></i>3,275명</span>
-              </div>
-            </div>
-            <div class="univ card">
-              <div class="image">
-                <img src="/images/univ/korea.jpg">
-              </div>
-              <div class="content">
-                <div class="header">고려대학교</div>
-                <div class="meta">
-                  <a>서울특별시 안암동</a>
-                </div>
+    <!-- Page Contents -->
+    <div class="pusher">
+      <div class="ui vertical main masthead center aligned segment">
 
-              </div>
-              <div class="extra content">
-                <span class="right floated"><i class="book icon"></i>348개 강의</span>
-                <span> <i class="user icon"></i>75명</span>
-              </div>
-            </div>
-            <div class="univ card">
-              <div class="image">
-                <img src="/images/univ/yonsei.jpg">
-              </div>
-              <div class="content">
-                <div class="header">연세대학교</div>
-                <div class="meta">
-                  <a>서울특별시 서대문구 신촌동</a>
-                </div>
-
-              </div>
-              <div class="extra content">
-                <span class="right floated"><i class="book icon"></i>348개 강의</span>
-                <span> <i class="user icon"></i>75명</span>
-              </div>
-            </div>
-            <div class="univ card">
-              <div class="image">
-                <img src="/images/univ/seoul.jpeg">
-              </div>
-              <div class="content">
-                <div class="header">서울대학교</div>
-                <div class="meta">
-                  <a>서울특별시 관악구</a>
-                </div>
-              </div>
-              <div class="extra content">
-                <span class="right floated"><i class="book icon"></i>348개 강의</span>
-                <span> <i class="user icon"></i>75명</span>
-              </div>
-            </div>
-            <div class="univ card">
-              <div class="image">
-                <img src="/images/univ/kyunghee.png">
-              </div>
-              <div class="content">
-                <div class="header">경희대학교</div>
-                <div class="meta">
-                  <a>서울특별시 동대문구 회기동</a>
-                </div>
-              </div>
-              <div class="extra content">
-                <span class="right floated"><i class="book icon"></i>348개 강의</span>
-                <span> <i class="user icon"></i>75명</span>
-              </div>
-            </div>
-            <div class="univ card">
-              <div class="image">
-                <img src="/images/univ/kaist.jpg">
-              </div>
-              <div class="content">
-                <div class="header">KAIST</div>
-                <div class="meta">
-                  <a>대전광역시 유성구</a>
-                </div>
-              </div>
-              <div class="extra content">
-                <span class="right floated"><i class="book icon"></i>348개 강의</span>
-                <span> <i class="user icon"></i>75명</span>
-              </div>
-            </div>
-            <div class="univ card">
-              <div class="image">
-                <img src="/images/univ/ajou.jpg">
-              </div>
-              <div class="content">
-                <div class="header">아주대학교</div>
-                <div class="meta">
-                  <a>경기도 수원시 영통구</a>
-                </div>
-              </div>
-              <div class="extra content">
-                <span class="right floated"><i class="book icon"></i>348개 강의</span>
-                <span> <i class="user icon"></i>75명</span>
-              </div>
+        <div class="ui container">
+          <div class="ui large secondary pointing menu main_menu">
+            <a class="toc item">
+              <i class="sidebar icon"></i>
+            </a>
+            <a class="active item" href="#"><i class="home icon"></i></a>
+            <a class="item">소개</a>
+            <a class="item" href="/tutor_register">튜터등록</a>
+            <a class="item">인기강좌</a>
+            <div class="right item">
+              <a class="ui basic button login_btn">로그인</a>
+              <a class="ui basic button">회원가입</a>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="center aligned column">
-            <a class="ui huge basic button">더 많은 대학교 보러가기</a>
+
+        <div class="ui text container animated fadeInUp">
+          <h1 class="ui inverted header" style="color: #388363">Camtues</h1>
+          <h2>당신이 배우고 싶은 모든 것,
+                <div class="ui shape">
+                    <div class="sides">
+                        <div class="ui side active">학교에서</div>
+                        <div class="ui side">친구에게</div>
+                        <div class="ui side">동기에게</div>
+                    </div>
+                </div>
+                배우세요
+            </h2>
+          <br/>
+          <div class="row">
+            <div class="ui stackable grid">
+              <div class="six wide column">
+                <div class="field">
+                  <select class="ui fluid dropdown">
+                      <option value="">대학교</option>
+                      <option value="KOU">고려대학교(서울)</option>
+                      <option value="KOUS">고려대학교(세종)</option>
+                      <option value="KHU">경희대학교(서울)</option>
+                      <option value="KHUK">경희대학교(국제)</option>
+                      <option value="SNU">서울대학교</option>
+                      <option value="SNU">연세대학교(서울)</option>
+                      <option value="SNU">연세대학교(원주)</option>
+                      <option value="SKKU">성균관대학교(인문)</option>
+                      <option value="SKKU">성균관대학교(자연)</option>
+                      <option value="HYU">한양대학교(서울)</option>
+                      <option value="HYUE">한양대학교(ERICA)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="ten wide column">
+                <div class="field">
+                  <div class="ui icon input main_search_bar">
+                    <input type="text" placeholder="배우고 싶은 것을 검색하세요"><i class="search icon"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <i class="arrow down icon"></i>
           </div>
         </div>
       </div>
-      <br />
-      <br />
-      <br />
-      <h2 class="ui center aligned icon header">
-        <i class="thumbs outline up icon"></i>
-        <br />
-        <div class="content">
-          Review
-          <div class="sub header">이 튜터 괜찮은 걸까? 튜티들이 직접 작성한 후기</div>
+
+      <div class="ui vertical stripe segment">
+        <h2 class="ui center aligned icon header">
+            <i class="university icon"></i>
+            <br/>
+            <div class="content">
+                대학교 캠퍼스
+                <div class="sub header">튜터링을 받을 대학교를 선택해주세요.</div>
+            </div>
+        </h2>
+        <br/>
+        <br/>
+        <br/>
+        <div class="ui middle aligned stackable grid container">
+          <div class="row">
+            <div class="ui three stackable link cards">
+              <div class="univ card">
+                <div class="image">
+                  <img src="/images/univ/hanyang-erica.jpg">
+                </div>
+                <div class="content">
+                  <div class="header">한양대학교 ERICA</div>
+                  <div class="meta">
+                    <a>경기도 안산시 상록구</a>
+                  </div>
+                </div>
+                <div class="extra content">
+                  <span class="right floated"><i class="book icon"></i>348개 강의</span>
+                  <span> <i class="user icon"></i>9,175명</span>
+                </div>
+              </div>
+              <div class="univ card">
+                <div class="image">
+                  <img src="/images/univ/hanyang-seoul.jpg">
+                </div>
+                <div class="content">
+                  <div class="header">한양대학교</div>
+                  <div class="meta">
+                    <a>서울특별시 왕십리</a>
+                  </div>
+                </div>
+                <div class="extra content">
+                  <span class="right floated"><i class="book icon"></i>348개 강의</span>
+                  <span> <i class="user icon"></i>3,275명</span>
+                </div>
+              </div>
+              <div class="univ card">
+                <div class="image">
+                  <img src="/images/univ/korea.jpg">
+                </div>
+                <div class="content">
+                  <div class="header">고려대학교</div>
+                  <div class="meta">
+                    <a>서울특별시 안암동</a>
+                  </div>
+
+                </div>
+                <div class="extra content">
+                  <span class="right floated"><i class="book icon"></i>348개 강의</span>
+                  <span> <i class="user icon"></i>75명</span>
+                </div>
+              </div>
+              <div class="univ card">
+                <div class="image">
+                  <img src="/images/univ/yonsei.jpg">
+                </div>
+                <div class="content">
+                  <div class="header">연세대학교</div>
+                  <div class="meta">
+                    <a>서울특별시 서대문구 신촌동</a>
+                  </div>
+
+                </div>
+                <div class="extra content">
+                  <span class="right floated"><i class="book icon"></i>348개 강의</span>
+                  <span> <i class="user icon"></i>75명</span>
+                </div>
+              </div>
+              <div class="univ card">
+                <div class="image">
+                  <img src="/images/univ/seoul.jpeg">
+                </div>
+                <div class="content">
+                  <div class="header">서울대학교</div>
+                  <div class="meta">
+                    <a>서울특별시 관악구</a>
+                  </div>
+                </div>
+                <div class="extra content">
+                  <span class="right floated"><i class="book icon"></i>348개 강의</span>
+                  <span> <i class="user icon"></i>75명</span>
+                </div>
+              </div>
+              <div class="univ card">
+                <div class="image">
+                  <img src="/images/univ/kyunghee.png">
+                </div>
+                <div class="content">
+                  <div class="header">경희대학교</div>
+                  <div class="meta">
+                    <a>서울특별시 동대문구 회기동</a>
+                  </div>
+                </div>
+                <div class="extra content">
+                  <span class="right floated"><i class="book icon"></i>348개 강의</span>
+                  <span> <i class="user icon"></i>75명</span>
+                </div>
+              </div>
+              <div class="univ card">
+                <div class="image">
+                  <img src="/images/univ/kaist.jpg">
+                </div>
+                <div class="content">
+                  <div class="header">KAIST</div>
+                  <div class="meta">
+                    <a>대전광역시 유성구</a>
+                  </div>
+                </div>
+                <div class="extra content">
+                  <span class="right floated"><i class="book icon"></i>348개 강의</span>
+                  <span> <i class="user icon"></i>75명</span>
+                </div>
+              </div>
+              <div class="univ card">
+                <div class="image">
+                  <img src="/images/univ/ajou.jpg">
+                </div>
+                <div class="content">
+                  <div class="header">아주대학교</div>
+                  <div class="meta">
+                    <a>경기도 수원시 영통구</a>
+                  </div>
+                </div>
+                <div class="extra content">
+                  <span class="right floated"><i class="book icon"></i>348개 강의</span>
+                  <span> <i class="user icon"></i>75명</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="center aligned column">
+              <a class="ui huge basic button">더 많은 대학교 보러가기</a>
+            </div>
+          </div>
         </div>
-      </h2>
-      <br />
-      <br />
-      <br />
-      <div class="ui middle aligned stackable grid container">
-        <div class="row">
-          <div class="ui two stackable link cards">
+        <br/>
+        <br/>
+        <br/>
+        <h2 class="ui center aligned icon header">
+            <i class="thumbs outline up icon"></i>
+            <br/>
+            <div class="content">
+                Review
+                <div class="sub header">이 튜터 괜찮은 걸까? 튜티들이 직접 작성한 후기</div>
+            </div>
+        </h2>
+        <br/>
+        <br/>
+        <br/>
+        <div class="ui middle aligned stackable grid container">
+          <div class="row">
+            <div class="ui two stackable link cards">
               <div class="ui review card">
-                  <div class="content">
-                    <img class="left floated mini ui image" src="/images/avatar/elliot.jpg">
-                    <div class="header">모션그래픽 첫걸음 - 애프터이펙터</div>
-                    <div class="meta">
-                      <a>김상준 튜터</a>
-                    </div>
-                    <div class="description">
-                      튜터님의 경력이 어마어마하신만큼 차근차근 확실하게 가르쳐주셔서 많은 것을 배울 수 있었습니다!!<br />
-                      에프터이펙트 다루는 방법 뿐 아니라 에펙의 활용과 영상에 대한 상식까지 덤으로 얻을 수 있어요.<br />
-                      수업 장소인 랩실도 정말 좋아요! 튜터님의 전용 공간이어서 편안한 수업이 가능하고, 그 안에서 다양한 아트 활동을 하시고 계셔서 튜터님께서 말씀하신 것처럼 많은 사람들과 네트워크도 가능한 곳이라고 생각합니다.<br />
-                    </div>
+                <div class="content">
+                  <img class="left floated mini ui image" src="/images/avatar/elliot.jpg">
+                  <div class="header">모션그래픽 첫걸음 - 애프터이펙터</div>
+                  <div class="meta">
+                    <a>김상준 튜터</a>
                   </div>
-                  <div class="extra">
-                    <div class="header">한양대학교 ERICA</div>
-                    <div class="ui star rating" data-rating="4" data-max-rating="5"></div>
-                    <div class="right floated author">
-                      <img class="ui avatar image" src="/images/avatar/matt.jpg"> 이상준
-                    </div>
-                    <div style="clear:both"></div>
+                  <div class="description">
+                    튜터님의 경력이 어마어마하신만큼 차근차근 확실하게 가르쳐주셔서 많은 것을 배울 수 있었습니다!!<br/> 에프터이펙트 다루는 방법 뿐 아니라 에펙의 활용과 영상에 대한 상식까지 덤으로 얻을 수 있어요.<br/> 수업 장소인 랩실도 정말 좋아요! 튜터님의 전용 공간이어서 편안한 수업이 가능하고, 그 안에서 다양한 아트 활동을 하시고 계셔서 튜터님께서 말씀하신 것처럼 많은 사람들과 네트워크도 가능한 곳이라고 생각합니다.<br/>
                   </div>
+                </div>
+                <div class="extra">
+                  <div class="header">한양대학교 ERICA</div>
+                  <div class="ui star rating" data-rating="4" data-max-rating="5"></div>
+                  <div class="right floated author">
+                    <img class="ui avatar image" src="/images/avatar/matt.jpg"> 이상준
+                  </div>
+                  <div style="clear:both"></div>
+                </div>
               </div>
               <div class="ui review card">
                 <div class="content">
@@ -294,9 +322,7 @@ $(document).ready(function(){
                     <a>김상준 튜터</a>
                   </div>
                   <div class="description">
-                    튜터님의 경력이 어마어마하신만큼 차근차근 확실하게 가르쳐주셔서 많은 것을 배울 수 있었습니다!!<br />
-                    에프터이펙트 다루는 방법 뿐 아니라 에펙의 활용과 영상에 대한 상식까지 덤으로 얻을 수 있어요.<br />
-                    수업 장소인 랩실도 정말 좋아요! 튜터님의 전용 공간이어서 편안한 수업이 가능하고, 그 안에서 다양한 아트 활동을 하시고 계셔서 튜터님께서 말씀하신 것처럼 많은 사람들과 네트워크도 가능한 곳이라고 생각합니다.<br />
+                    튜터님의 경력이 어마어마하신만큼 차근차근 확실하게 가르쳐주셔서 많은 것을 배울 수 있었습니다!!<br/> 에프터이펙트 다루는 방법 뿐 아니라 에펙의 활용과 영상에 대한 상식까지 덤으로 얻을 수 있어요.<br/> 수업 장소인 랩실도 정말 좋아요! 튜터님의 전용 공간이어서 편안한 수업이 가능하고, 그 안에서 다양한 아트 활동을 하시고 계셔서 튜터님께서 말씀하신 것처럼 많은 사람들과 네트워크도 가능한 곳이라고 생각합니다.<br/>
                   </div>
 
                 </div>
@@ -309,70 +335,68 @@ $(document).ready(function(){
                   <div style="clear:both"></div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="center aligned column">
+              <a class="ui huge basic button">더 많은 리뷰 보러가기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui middle aligned stackable grid container">
+        <div class="row">
+          <div class="eight wide column">
+            <h3 class="ui header">We Help Companies and Companions</h3>
+            <p>We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs...through pure data analytics.</p>
+            <h3 class="ui header">We Make Bananas That Can Dance</h3>
+            <p>Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.</p>
+          </div>
+          <div class="six wide right floated column">
+            <img src="assets/images/wireframe/white-image.png" class="ui large bordered rounded image">
           </div>
         </div>
         <div class="row">
           <div class="center aligned column">
-            <a class="ui huge basic button">더 많은 리뷰 보러가기</a>
+            <a class="ui huge button">Check Them Out</a>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="ui middle aligned stackable grid container">
-      <div class="row">
-        <div class="eight wide column">
-          <h3 class="ui header">We Help Companies and Companions</h3>
-          <p>We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs...through pure data analytics.</p>
-          <h3 class="ui header">We Make Bananas That Can Dance</h3>
-          <p>Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.</p>
-        </div>
-        <div class="six wide right floated column">
-          <img src="assets/images/wireframe/white-image.png" class="ui large bordered rounded image">
-        </div>
-      </div>
-      <div class="row">
-        <div class="center aligned column">
-          <a class="ui huge button">Check Them Out</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="ui vertical stripe quote segment">
-      <div class="ui equal width stackable internally celled grid">
-        <div class="center aligned row">
-          <div class="column">
-            <h3>"What a Company"</h3>
-            <p>That is what they all say about us</p>
-          </div>
-          <div class="column">
-            <h3>"I shouldn't have gone with their competitor."</h3>
-            <p>
-              <img src="assets/images/avatar/nan.jpg" class="ui avatar image"> <b>Nan</b> Chief Fun Officer Acme Toys
-            </p>
+      <div class="ui vertical stripe quote segment">
+        <div class="ui equal width stackable internally celled grid">
+          <div class="center aligned row">
+            <div class="column">
+              <h3>"What a Company"</h3>
+              <p>That is what they all say about us</p>
+            </div>
+            <div class="column">
+              <h3>"I shouldn't have gone with their competitor."</h3>
+              <p>
+                <img src="assets/images/avatar/nan.jpg" class="ui avatar image"> <b>Nan</b> Chief Fun Officer Acme Toys
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="ui vertical stripe segment">
-      <div class="ui text container">
-        <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
-        <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.</p>
-        <a class="ui large button">Read More</a>
-        <h4 class="ui horizontal header divider">
-            <a href="#">Case Studies</a>
-          </h4>
-        <h3 class="ui header">Did We Tell You About Our Bananas?</h3>
-        <p>Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but its really true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>
-        <a class="ui large button">I'm Still Quite Interested</a>
+      <div class="ui vertical stripe segment">
+        <div class="ui text container">
+          <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
+          <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.</p>
+          <a class="ui large button">Read More</a>
+          <h4 class="ui horizontal header divider">
+                <a href="#">Case Studies</a>
+            </h4>
+          <h3 class="ui header">Did We Tell You About Our Bananas?</h3>
+          <p>Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but its really true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>
+          <a class="ui large button">I'm Still Quite Interested</a>
+        </div>
       </div>
+
+      <% include ./Footer.ejs %>
     </div>
-
-
-
-    <% include ./Footer.ejs %>
-  </div>
 </body>
 
 </html>

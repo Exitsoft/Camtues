@@ -1,4 +1,5 @@
 /* Exitsoft */
+/* Primary Color Code: #388363 */
 
 /* Main CSS */
 
@@ -11,11 +12,16 @@
   background-size: cover;
 }
 
+.masthead .ui.side {
+  font-weight: bold;
+  color: #388363;
+}
+
 .main_menu {
   border-color: transparent !important;
 }
 
-.main_search_bar{
+.main_search_bar {
   width: 100%;
 }
 
@@ -42,20 +48,18 @@
   min-height: 250px !important;
 }
 
-
-
-
 /* Login CSS*/
 .modal .login {
   width: 60%;
 }
+
 .login input {
   margin-bottom: 5px !important;
 }
+
 .login .button {
   margin-bottom: 5px !important;
 }
-
 
 /* Tutor Register Page */
 .tutor.form {
@@ -67,12 +71,15 @@
     width: 100%;
     margin-top: 5em;
   }
+
   .tutor.form .fields {
     margin-bottom: 1em !important;
   }
+
   .modal .login {
     width: 95%;
   }
+
   .container {
     margin-bottom: 1.5em;
   }
