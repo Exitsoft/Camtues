@@ -11,7 +11,7 @@
       $('.login_modal').modal('show');
     });
 
-    $('.arrow.down.icon').click(function() {
+    $('.row.arrow').click(function() {
       $("html, body").animate({
         scrollTop: $('.masthead').height() + 50
       }, 1000);
@@ -25,14 +25,22 @@
     $('.main.masthead h1.ui.header').css({
       'margin-top': screen.height / 4 - $('.main.masthead .container').height()
     })
-    $('.arrow').css({
-      'margin-top': '10em'
-    });
-    $('.ui.rating').rating();
 
+    $('.ui.rating').rating();
   });
 </script>
+<style>
+  .row.arrow {
+    cursor: pointer;
+    margin-top: 10em;
+  }
 
+  @media only screen and (max-width: 700px) {
+    .row.arrow {
+      margin-top: 5em;
+    }
+  }
+</style>
 <body>
   <!-- Modal -->
   <% include ./login/login_modal.ejs %>
@@ -126,7 +134,10 @@
               </div>
             </div>
           </div>
-          <div class="row">
+          <div class="arrow row">
+            <label class="primary">좀 더 많은 정보를 원한다면?</label>
+            <br />
+            <br />
             <i class="primary arrow down icon"></i>
           </div>
         </div>

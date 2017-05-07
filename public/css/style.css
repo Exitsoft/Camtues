@@ -51,6 +51,11 @@
 i.primary {
   color: #388363;
 }
+
+label.primary {
+  color: #388363;
+}
+
 /* Login CSS*/
 .modal .login {
   width: 60%;
