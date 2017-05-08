@@ -16,4 +16,9 @@ router.get('/tutor_register', function(req, res, next) {
   res.render('tutor_register', { title: 'Express' });
 });
 
+/* GET Tutor Register page. */
+router.get('/univ', function(req, res, next) {
+  res.render('univ', { title: 'Express' });
+});
+
 module.exports = router;

@@ -153,6 +153,50 @@
   }
 </style>
 <script>
+  // For University Theme Color
+  function changePrimaryColor(color) {
+    $('.primary').attr("style",'color:' + color + ' !important');
+    $('a.active.item').attr("style",'color:' + color + ' !important; border-color:' + color +' !important');
+  }
+  function getColorByUnivName(univ) {
+    if(univ == "CUK" || univ.includes("가톨릭대")) return "#003594";
+    if(univ == "KU" || univ.includes("건국대")) return "#036b3f";
+    if(univ == "KHU" || univ.includes("경희대")) return "#9d2235";
+    if(univ == "KRU" || univ.includes("고려대")) return "#862633";
+    if(univ == "KWU" || univ.includes("광운대")) return "#8b1f12";
+    if(univ == "KMU" || univ.includes("국민대")) return "#2864ae";
+
+    if(univ == "DKU" || univ.includes("단국대")) return "#245ca1";
+    if(univ == "DGU" || univ.includes("동국대")) return "#cb6015";
+
+    if(univ == "MJU" || univ.includes("명지대")) return "#10336c";
+
+    if(univ == "SYU" || univ.includes("삼육대")) return "#5389c6";
+    if(univ == "SMU" || univ.includes("상명대")) return "#1f519b";
+    if(univ == "SGU" || univ.includes("서강대")) return "#B0232A";
+    if(univ == "SKU" || univ.includes("서경대")) return "#71bf44";
+    if(univ == "SNU" || univ.includes("서울대")) return "#20408e";
+    if(univ == "SeoulTech" || univ.includes("서울과기대")) return "#00205b";
+    if(univ == "UOS" || univ.includes("서울시립대")) return "#151f6d";
+    if(univ == "SKKU" || univ.includes("성균관대")) return "#8DC63F";
+    if(univ == "SJU" || univ.includes("세종대")) return "#ba0c2f";
+    if(univ == "SSU" || univ.includes("숭실대")) return "#00587c";
+
+
+    if(univ == "YSU" || univ.includes("연세대")) return "#16407d";
+
+    if(univ == "CAU" || univ.includes("중앙대")) return "#004c97";
+
+    if(univ == "HUFS" || univ.includes("한국외국어대")) return "#00677F";
+    if(univ == "HSU" || univ.includes("한성대")) return "#62b5e5";
+    if(univ == "HYU" || univ.includes("한양대") ) return "#003c71";
+    if(univ == "HIU" || univ.includes("홍익대")) return "#002c62";
+
+
+    return "#388363";
+
+  }
+
   $(document).ready(function() {
     // fix menu when passed
     $('.masthead')

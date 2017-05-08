@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ./header.ejs %>
+    <title>University</title>
+  </head>
+  <script>
+
+    $(document).ready(function(){
+      var univ = "연세대학교(서울)";
+      // var univ = "한양대학교(ERICA)";
+      var univ = "고려대학교(서울)";
+      // var univ = "서울대학교(ERICA)";
+      var univ = "서울과기대";
+      $('.ui.primary.header').text(univ);
+      changePrimaryColor(getColorByUnivName(univ));
+    });
+  </script>
+  <style>
+
+  </style>
+  <body>
+    <!-- Modal -->
+    <% include ./login/login_modal.ejs %>
+    <!-- Following Menu -->
+    <div class="ui large top fixed hidden menu">
+      <div class="ui container">
+        <a class="item" href="/"><i class="home icon"></i></a>
+        <a class="item"><i class="add user icon"></i>소개</a>
+        <a class="active item" href="/tutor_register"><i class="add user icon"></i>튜터등록</a>
+        <a class="item"><i class="search icon"></i>강의검색</a>
+        <div class="right menu">
+          <div class="item">
+            <a class="ui button login_btn">로그인</a>
+          </div>
+          <div class="item">
+            <a class="ui primary button">회원가입</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <div class="ui vertical inverted sidebar menu">
+      <a class="item" href="/">홈</a>
+      <a class="item">소개</a>
+      <a class="active item" href="/tutor_register">튜터등록</a>
+      <a class="item" href="/login">로그인</a>
+      <a class="item">회원가입</a>
+    </div>
+
+    <!-- Page Contents -->
+    <div class="pusher">
+      <div class="ui vertical sub masthead center aligned segment">
+        <div class="ui container">
+          <div class="ui large secondary pointing menu main_menu">
+            <a class="toc item">
+              <i class="sidebar icon"></i>
+            </a>
+            <a class="item" href="/"><i class="home icon"></i></a>
+            <a class="item">소개</a>
+            <a class="active item" href="/tutor_register">튜터등록</a>
+            <a class="item">인기강좌</a>
+            <div class="right item">
+              <a class="ui basic button login_btn">로그인</a>
+              <a class="ui basic button">회원가입</a>
+            </div>
+          </div>
+        </div>
+        <div class="animated fadeInUp ui text container">
+          <h1 class="ui primary header">한양대학교(ERICA)</h1>
+          <h2>경기도 안산시 상록구</h2>
+          <br />
+        </div>
+      </div>
+
+      <div class="ui vertical stripe segment">
+        <div class="ui middle aligned stackable grid container">
+        </div>
+      </div>
+    <% include ./Footer.ejs %>
+  </body>
+</html>
