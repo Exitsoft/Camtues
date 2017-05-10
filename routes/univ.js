@@ -6,15 +6,13 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-/* GET Login page. */
-router.get('/login', function(req, res, next) {
-  res.render('login/login_page', { title: 'Express' });
-});
-
 /* GET Tutor Register page. */
-router.get('/tutor_register', function(req, res, next) {
-  res.render('tutor_register', { title: 'Express' });
+router.get('/Hanyang_Seoul', function(req, res, next) {
+  res.render('univ', { univName: '한양대학교(서울)' });
 });
 
+router.get('/Hanyang_ERICA', function(req, res, next) {
+  res.render('univ', { univName: '한양대학교(ERICA)' });
+});
 
 module.exports = router;

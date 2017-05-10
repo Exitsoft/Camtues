@@ -7,11 +7,8 @@
   <script>
 
     $(document).ready(function(){
-      var univ = "연세대학교(서울)";
-      // var univ = "한양대학교(ERICA)";
-      var univ = "고려대학교(서울)";
-      // var univ = "서울대학교(ERICA)";
-      var univ = "서울과기대";
+
+      var univ = '<%= univName %>';
       $('.ui.primary.header').text(univ);
       changePrimaryColor(getColorByUnivName(univ));
     });
